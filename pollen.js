@@ -3,9 +3,10 @@ var Bitmap = lightcycle.graphics.Bitmap;
 var Color = lightcycle.graphics.Color;
 var BitGrid = lightcycle.datastructure.BitGrid;
 
-// Default colors
-var ON_COLOR = new Color(172, 255, 128, 255);
-var OFF_COLOR = new Color(0, 0, 0, 255);
+// Default settings
+var ON_COLOR = new Color(172, 221, 172, 255);
+var OFF_COLOR = new Color(64, 64, 64, 255);
+var DENSITY = 0.1;
 
 function addRandomCells(points, state, n) {
   for (var i = 0; i < n;) {
@@ -77,7 +78,7 @@ function init() {
 
   // Create cells
   var points = [];
-  addRandomCells(points, state, 16000);
+  addRandomCells(points, state, canvas.width * canvas.height * DENSITY);
 
   // Start process
   var start = new Date().getTime();

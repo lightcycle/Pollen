@@ -6,17 +6,53 @@
     <script language="javascript" src="color.js"></script>
     <script language="javascript" src="bitmap.js"></script>
     <script language="javascript" src="pollen.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400' rel='stylesheet' type='text/css'>
     <style>
       body {
         font-family: 'Lato', sans-serif;
         font-weight: 400;
+        background-color: #DDDDDD;
+        padding: 0;
+        margin: 2em 0 2em 0;
+        color: #404040;
+        line-height: 1.5em;
+      }
+      div#page {
+        margin: 0 auto;
+        padding: 0 0;
+        max-width: 800px;
+        background-color: #FFFFFF;
+      }
+      h1 {
+        font-size: 1.5em;
+        margin: 0px;
+        padding: 0px;
+      }
+      canvas {
+        float: left;
+        margin: 20px;
+      }
+      div#details {
+        float:left;
+        width: 360px;
+        margin: 20px;
+      }
+      a {
+        color: #80B0E0;
+        font-weight: bold;
+        text-decoration: none;
       }
     </style>
   </head>
   <body onload="init();">
-    <h1>Pollen</h1>
-    <p>A simple artifical life demo using Javascript with the <code>&lt;canvas&gt;</code> element.  Cells move individually, in random order.  The direction each cell moves to is determined by a simple set of rules and the adjacent cells.  Only one cell can occupy a given space.  Eventually cells stack up into temporary structures.  <a href="https://github.com/lightcycle/Pollen.git">Fork it on GitHub!</a></p>
-    <canvas id="canvas" width="400" height="400"></canvas>
+    <div id="page">
+      <div id="details">
+        <h1>Pollen</h1>
+        <p>A simple artifical life demo using Javascript with the <code>&lt;canvas&gt;</code> element.  Cells move individually, in random order.  The direction each cell moves to is determined by a simple set of rules and the adjacent cells.  Only one cell can occupy a given space.  Eventually cells stack up into temporary structures.</p>
+        <p><a href="https://github.com/lightcycle/Pollen.git">Fork it on GitHub!</a></p>
+      </div>
+      <canvas id="canvas" width="360" height="360"></canvas>
+      <div style="clear: both;"></div>
+    </div>
   </body>
 </html>
