@@ -1,13 +1,22 @@
 <html>
   <head>
-    <title>Canvas tutorial</title>
+    <title>Pollen &mdash; a simple artificial life demo using Javascript with the &lt;canvas&gt; element.</title>
     <script language="javascript" src="rAF.js"></script>
     <script language="javascript" src="bitgrid.js"></script>
     <script language="javascript" src="color.js"></script>
     <script language="javascript" src="bitmap.js"></script>
     <script language="javascript" src="pollen.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+    <style>
+      body {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+      }
+    </style>
   </head>
   <body onload="init();">
+    <h1>Pollen</h1>
+    <p>A simple artifical life demo using Javascript with the <code>&lt;canvas&gt;</code> element.  Cells move individually, in random order.  The direction each cell moves to is determined by a simple set of rules and the adjacent cells.  Only one cell can occupy a given space.  Eventually cells stack up into temporary structures.  <a href="https://github.com/lightcycle/Pollen.git">Fork it on GitHub!</a></p>
     <canvas id="canvas" width="400" height="400"></canvas>
   </body>
 </html>
